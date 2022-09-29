@@ -1,0 +1,21 @@
+version: '3'
+services:
+ aggregator:
+  build: aggregator/
+  ports:
+   - "8091:8091"
+  container_name: aggregator
+ temperature:
+  build: temp/
+  ports:
+   - "8092:8092"
+  container_name: temperature
+ humidity:
+  build: humid/
+  ports:
+   - "8093:8093"
+  container_name: humidity
+networks:
+  default:
+    external: true
+    name: eureka

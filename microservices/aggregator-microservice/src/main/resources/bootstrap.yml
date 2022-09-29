@@ -1,0 +1,7 @@
+spring:
+   cloud:
+      config:
+       uri: http://config:8888
+       enabled: true
+   application:
+    name: application 

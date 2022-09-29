@@ -1,0 +1,18 @@
+spring:
+    datasource:
+        url: "jdbc:h2:mem:testdb"
+    application:        name: temperature-service 
+
+server:
+    port: 8092
+  
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://register:8761/eureka
+  instance:
+    hostname: register
+    prefer-ip-address: true
+eureka.client.enabled: true

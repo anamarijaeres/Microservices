@@ -1,0 +1,16 @@
+version: '3'
+services:
+ config:
+  image: config
+  ports:
+   - "8888:8888"
+  container_name: config
+ register:
+  build: register/
+  ports:
+   - "8761:8761"
+  container_name: register
+networks:
+  default:
+    external: true
+    name: eureka
